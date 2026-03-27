@@ -1,0 +1,106 @@
+Panels:
+  - Class: rviz_common/Displays
+    Name: Displays
+  - Class: rviz_common/Views
+    Name: Views
+Visualization Manager:
+  Class: ""
+  Displays:
+    - Class: rviz_default_plugins/Grid
+      Name: Grid
+      Enabled: true
+      Cell Size: 1
+      Line Style:
+        Value: Lines
+      Color: 160; 160; 164
+      Plane Cell Count: 20
+
+    - Class: rviz_default_plugins/TF
+      Name: TF
+      Enabled: true
+      Show Arrows: false
+      Show Axes: true
+      Show Names: true
+      Update Interval: 0
+      Frame Timeout: 15
+      Frames:
+        All Enabled: true
+
+    - Class: rviz_default_plugins/Map
+      Name: Local Costmap
+      Enabled: true
+      Topic:
+        Value: /local_costmap/costmap
+        Reliability Policy: Reliable
+      Alpha: 0.5
+      Color Scheme: costmap
+      Draw Behind: false
+
+    - Class: rviz_default_plugins/Map
+      Name: Global Costmap
+      Enabled: true
+      Topic:
+        Value: /global_costmap/costmap
+        Reliability Policy: Reliable
+      Alpha: 0.3
+      Color Scheme: costmap
+      Draw Behind: true
+
+    - Class: rviz_default_plugins/Path
+      Name: Nav2 Plan
+      Enabled: true
+      Topic:
+        Value: /plan
+      Color: 0; 255; 0
+      Line Style: Lines
+      Width: 0.03
+
+    - Class: rviz_default_plugins/Path
+      Name: Local Plan
+      Enabled: true
+      Topic:
+        Value: /local_plan
+      Color: 255; 255; 0
+      Line Style: Lines
+      Width: 0.02
+
+    - Class: rviz_default_plugins/Marker
+      Name: Lookahead Point
+      Enabled: true
+      Topic:
+        Value: /lookahead_point
+
+    - Class: rviz_default_plugins/Odometry
+      Name: ZED Odom
+      Enabled: true
+      Topic:
+        Value: /zed/zed_node/odom
+        Reliability Policy: Best Effort
+      Keep: 100
+      Shape:
+        Value: Arrow
+      Covariance:
+        Value: false
+
+  Global Options:
+    Background Color: 48; 48; 48
+    Fixed Frame: map
+    Frame Rate: 30
+  Name: root
+  Tools:
+    - Class: rviz_default_plugins/MoveCamera
+    - Class: rviz_default_plugins/Select
+    - Class: rviz_default_plugins/FocusCamera
+    - Class: nav2_rviz_plugins/GoalTool
+      Topic:
+        Value: /goal_pose
+    - Class: rviz_default_plugins/SetInitialPose
+      Topic:
+        Value: /initialpose
+  Views:
+    Current:
+      Class: rviz_default_plugins/TopDownOrtho
+      Name: TopDownOrtho
+      Scale: 30
+      X: 0
+      Y: 0
