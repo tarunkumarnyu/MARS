@@ -14,12 +14,12 @@ Indoor waypoint navigation for a Traxxas Ackermann-steering rover using **ArduPi
 
 ## Demo
 
-<!--
-  Drag-and-drop your mars.MOV (or assets/mars_demo.mp4) into the GitHub README editor right here
-  to get a user-attachments URL. The fallback raw link below works once pushed.
--->
 
-https://github.com/tarunkumarnyu/MARS/raw/main/assets/mars_demo.mp4
+
+https://github.com/user-attachments/assets/486f74b1-c305-458a-b63f-8821359df5ae
+
+
+
 
 ## System Architecture
 
